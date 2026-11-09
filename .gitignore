@@ -1,0 +1,25 @@
+# CLion
+.idea/
+*.iml
+
+# CMake 和构建产物
+cmake-build-*/
+build/
+out/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# 编译生成的文件
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+
+# 系统文件
+.DS_Store
+Thumbs.db
