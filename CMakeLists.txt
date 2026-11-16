@@ -32,7 +32,11 @@ message("Build type: " ${CMAKE_BUILD_TYPE})
 enable_language(C ASM)
 
 # Create an executable object type
-add_executable(${CMAKE_PROJECT_NAME})
+add_executable(${CMAKE_PROJECT_NAME}
+        BSP/Inc/bsp_buzzer.h
+        BSP/Src/bsp_buzzer.c
+        BSP/Inc/bsp_uart.h
+        BSP/Src/bsp_uart.c)
 
 # Add STM32CubeMX generated sources
 add_subdirectory(cmake/stm32cubemx)
@@ -44,7 +48,9 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/BSP/Src/bsp_led.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/BSP/Src/bsp_led.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/BSP/Src/bsp_uart.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/BSP/Src/bsp_buzzer.c
     # Add user sources here
 )
 
