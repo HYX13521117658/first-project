@@ -22,7 +22,7 @@
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
-
+#include "bsp_led.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -113,7 +113,6 @@ int main(void)
        WS2812_SetColor(0, 0, 255);
        HAL_Delay(500);
       __HAL_TIM_SET_COMPARE(&htim12, TIM_CHANNEL_2, 500);
-      
       HAL_Delay(50);
 
     /* USER CODE END WHILE */

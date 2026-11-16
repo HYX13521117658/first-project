@@ -39,7 +39,6 @@ extern SPI_HandleTypeDef hspi6;
 /* USER CODE END Private defines */
 
 void MX_SPI6_Init(void);
-void WS2812_SetColor(uint8_t G, uint8_t R, uint8_t B);
 
 /* USER CODE BEGIN Prototypes */
 
